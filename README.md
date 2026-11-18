@@ -623,10 +623,10 @@ flowchart TD
 ├── sistema.slx                            # Modelo Simulink/Simscape
 ├── Análisis_Matemático_P4.pdf             # Análisis matemático manuscrito
 ├── Diagrama_Biologico.png                 # Diagrama biológico (BioRender)
-├── Propiedades del controlador.jpeg       # Evidencia de sintonización del PID
+├── Propiedades_PID.jpeg       # Evidencia de sintonización del PID
 ├── Respuesta_matlab.pdf                   # Figura MATLAB/Simulink
 ├── Respuesta_python.pdf                   # Figura Python
-├── Montaje experimental.jpeg              # Fotografía del montaje experimental
+├── Montaje_experimental.jpeg              # Fotografía del montaje experimental
 └── Respuesta_lab.jpg                      # Captura del osciloscopio
 ```
 

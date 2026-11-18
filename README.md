@@ -124,7 +124,7 @@ Las hormonas se liberan desde glándulas especializadas, se transportan por la c
 - $V_s(t)$ se mide en el nodo de unión de $R_1$, $C$ y $L$; $F_e=F_c+F_s$, donde $F_c$ es la corriente del capacitor.
 - Dos elementos independientes de almacenamiento de energía ($C$ y $L$) implican un sistema de **segundo orden**.
 
-El esquema manuscrito del circuito, con $V_e$, $V_s$, $F_e$, $F_s$, $F_c$, nodos y referencia, se encuentra en la primera página de [`Análisis Matemático P4.pdf`](./Análisis Matemático P4.pdf).
+El esquema manuscrito del circuito, con $V_e$, $V_s$, $F_e$, $F_s$, $F_c$, nodos y referencia, se encuentra en la primera página de [`Análisis_Matemático_P4.pdf`](./Análisis_Matemático_P4.pdf).
 
 ### Parámetros del control y del caso
 
@@ -207,7 +207,7 @@ $$
 \boxed{G_{caso}(s)=\frac{0.1\,s+1000}{0.1\,s^{2}+1000.1\,s+2000}}
 $$
 
-Los desarrollos manuscritos se conservan en [`Análisis Matemático P4.pdf`](./Análisis Matemático P4.pdf). Los coeficientes coinciden con los bloques de función de transferencia de `sistema.slx` y con la función `sistema()` de `Suarez23212236.py`.
+Los desarrollos manuscritos se conservan en [`Análisis_Matemático_P4.pdf`](./Análisis_Matemático_P4.pdf). Los coeficientes coinciden con los bloques de función de transferencia de `sistema.slx` y con la función `sistema()` de `Suarez23212236.py`.
 
 [Volver al contenido](#contenido)
 
@@ -415,7 +415,7 @@ def sistema(R1, L, C, R2):
 <a id="biologico"></a>
 ## Diagrama biológico
 
-![Relación entre el sistema endócrino, el modelo conceptual y el circuito equivalente](./Diagrama_Biologico.png)
+![Relación entre el sistema endócrino, el modelo conceptual y el circuito equivalente](./Diagrama_biologico.jpeg)
 
 El diagrama debe relacionar tres niveles de representación: (1) el **sistema biológico** (glándula, circulación, tejido diana), (2) el **modelo conceptual** (estímulo, transporte, almacenamiento, inercia y utilización) y (3) el **circuito equivalente** ($V_e$, $R_1$, $C$, $L$, $R_2$, $V_s$).
 
@@ -459,8 +459,8 @@ El caso con PID sigue la referencia del control con un pico transitorio de aprox
 | Reporte del cuaderno MATLAB | [`Suarez23212236.pdf`](./Suarez23212236.pdf) |
 | Figura exportada por MATLAB/Simulink | [`Respuesta_matlab.pdf`](./Respuesta_matlab.pdf) |
 | Figura exportada por Python | [`Respuesta_python.pdf`](./Respuesta_python.pdf) |
-| Evidencia de sintonización | [`Propiedades del controlador.jpeg`](./Propiedades del controlador.jpeg) |
-| Análisis matemático manuscrito | [`Análisis Matemático P4.pdf`](./Análisis Matemático P4.pdf) |
+| Evidencia de sintonización | [`Propiedades del controlador.jpeg`](./Propiedades_del_controlador.jpeg) |
+| Análisis matemático manuscrito | [`Análisis_Matemático_P4.pdf`](./Análisis_Matemático_P4.pdf) |
 
 ### Verificación cruzada
 
@@ -491,7 +491,7 @@ Las diferencias entre MATLAB/Simulink y Python pueden atribuirse a:
 
 Los circuitos del control y del caso, junto con el controlador analógico basado en amplificadores operacionales, se construyeron en protoboard con los valores comerciales especificados. El instrumental empleado fue generador de funciones, fuente de alimentación simétrica para los amplificadores operacionales y osciloscopio OWON.
 
-![Montaje experimental en protoboard](./Montaje experimental.jpeg)
+![Montaje experimental en protoboard](./Montaje_experimental.jpeg)
 
 *(Pendiente: indicar qué sección del montaje corresponde al circuito RLC, al controlador y a los puntos de medición $V_a$ y $V_b$.)*
 
@@ -621,7 +621,7 @@ flowchart TD
 ├── Suarez23212236.pdf                     # Exportación del cuaderno
 ├── Suarez23212236.py                      # Implementación Python
 ├── sistema.slx                            # Modelo Simulink/Simscape
-├── Análisis Matemático P4.pdf             # Análisis matemático manuscrito
+├── Análisis_Matemático_P4.pdf             # Análisis matemático manuscrito
 ├── Diagrama_Biologico.png                 # Diagrama biológico (BioRender)
 ├── Propiedades del controlador.jpeg       # Evidencia de sintonización del PID
 ├── Respuesta_matlab.pdf                   # Figura MATLAB/Simulink

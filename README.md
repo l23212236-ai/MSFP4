@@ -348,7 +348,7 @@ Forma paralela, dominio del tiempo, con *Response Time* $=0.00144\,\mathrm{s}$ y
 | Margen de fase | $90^\circ$ a $1.38\times10^{3}\,\mathrm{rad/s}$ |
 | Estabilidad en lazo cerrado | Estable |
 
-![Ganancias y desempeño del controlador PID en PID Tuner](./Propiedades del controlador.jpeg)
+![Ganancias y desempeño del controlador PID en PID Tuner](./Propiedades_del_controlador.jpeg)
 
 El término integral (polo en el origen del controlador) lleva el error en estado estacionario a cero aun cuando la planta del caso tiene ganancia DC finita de $0.5$.
 

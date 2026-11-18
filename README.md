@@ -10,9 +10,9 @@ El caso de estudio representa de forma simplificada la dinámica de una señal h
 **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de Tijuana  
 **Asignatura:** Modelado de Sistemas Fisiológicos  
 **Programa:** Ingeniería Biomédica  
-**Estudiante:** Gustavo Ortega Odabachea  
-**Número de control:** 23212223  
-**Correo institucional:** L23212223@tectijuana.edu.mx  
+**Estudiante:** Vanessa Yamileth Suarez Ceja
+**Número de control:** 23212236  
+**Correo institucional:** L23212236@tectijuana.edu.mx  
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
 
 ---
@@ -124,7 +124,7 @@ Las hormonas se liberan desde glándulas especializadas, se transportan por la c
 - $V_s(t)$ se mide en el nodo de unión de $R_1$, $C$ y $L$; $F_e=F_c+F_s$, donde $F_c$ es la corriente del capacitor.
 - Dos elementos independientes de almacenamiento de energía ($C$ y $L$) implican un sistema de **segundo orden**.
 
-El esquema manuscrito del circuito, con $V_e$, $V_s$, $F_e$, $F_s$, $F_c$, nodos y referencia, se encuentra en la primera página de [`Analisis_matematico.pdf`](./Analisis_matematico.pdf).
+El esquema manuscrito del circuito, con $V_e$, $V_s$, $F_e$, $F_s$, $F_c$, nodos y referencia, se encuentra en la primera página de [`Análisis Matemático P4.pdf`](./Análisis Matemático P4.pdf).
 
 ### Parámetros del control y del caso
 
@@ -207,7 +207,7 @@ $$
 \boxed{G_{caso}(s)=\frac{0.1\,s+1000}{0.1\,s^{2}+1000.1\,s+2000}}
 $$
 
-Los desarrollos manuscritos se conservan en [`Analisis_matematico.pdf`](./Analisis_matematico.pdf). Los coeficientes coinciden con los bloques de función de transferencia de `sistema.slx` y con la función `sistema()` de `Ortega23212223.py`.
+Los desarrollos manuscritos se conservan en [`Análisis Matemático P4.pdf`](./Análisis Matemático P4.pdf). Los coeficientes coinciden con los bloques de función de transferencia de `sistema.slx` y con la función `sistema()` de `Suarez23212236.py`.
 
 [Volver al contenido](#contenido)
 
@@ -293,7 +293,7 @@ El subsistema **Caso** incorpora además el bloque *PID Controller* en retroalim
 
 ### Cuaderno de MATLAB
 
-[`Ortega23212223.mlx`](./Ortega23212223.mlx) abre el modelo, configura la simulación, recupera las señales y las grafica con la función `plotsignals`, que exporta la figura en PDF vectorial. Su exportación está en [`Ortega23212223.pdf`](./Ortega23212223.pdf).
+[`Suarez23212236.mlx`](./Suarez23212236.mlx) abre el modelo, configura la simulación, recupera las señales y las grafica con la función `plotsignals`, que exporta la figura en PDF vectorial. Su exportación está en [`Suarez23212236.pdf`](./Suarez23212236.pdf).
 
 ```matlab
 open_system('sistema')
@@ -348,7 +348,7 @@ Forma paralela, dominio del tiempo, con *Response Time* $=0.00144\,\mathrm{s}$ y
 | Margen de fase | $90^\circ$ a $1.38\times10^{3}\,\mathrm{rad/s}$ |
 | Estabilidad en lazo cerrado | Estable |
 
-![Ganancias y desempeño del controlador PID en PID Tuner](./Propiedades_PID.jpeg)
+![Ganancias y desempeño del controlador PID en PID Tuner](./Propiedades del controlador.jpeg)
 
 El término integral (polo en el origen del controlador) lleva el error en estado estacionario a cero aun cuando la planta del caso tiene ganancia DC finita de $0.5$.
 
@@ -387,7 +387,7 @@ $$
 <a id="python"></a>
 ## Reproducción en Python
 
-[`Ortega23212223.py`](./Ortega23212223.py) utiliza `numpy`, `matplotlib` y `python-control`:
+[`Suarez23212236.py`](./Suarez23212236.py) utiliza `numpy`, `matplotlib` y `python-control`:
 
 1. Define el vector temporal y el escalón en $t=1\,\mathrm{s}$.
 2. Registra los parámetros $[R_1,L,C,R_2]$ del control y del caso.
@@ -442,7 +442,7 @@ El diagrama debe relacionar tres niveles de representación: (1) el **sistema bi
 | Polos | $-1010.01;\ -999\,989.99$ | $-2.0002;\ -9998.99$ | $-9999.04;\ -827.07;\ -330.55$ |
 | Estabilidad | Estable | Estable | Estable |
 
-Los valores de lazo abierto coinciden con el análisis manuscrito. Los polos de lazo cerrado y el valor final del caso con PID provienen de la ejecución de `Ortega23212223.py`.
+Los valores de lazo abierto coinciden con el análisis manuscrito. Los polos de lazo cerrado y el valor final del caso con PID provienen de la ejecución de `Suarez23212236.py`.
 
 Con las ganancias de Python, el lazo cerrado es
 
@@ -456,11 +456,11 @@ El caso con PID sigue la referencia del control con un pico transitorio de aprox
 
 | Resultado | Archivo |
 |---|---|
-| Reporte del cuaderno MATLAB | [`Ortega23212223.pdf`](./Ortega23212223.pdf) |
+| Reporte del cuaderno MATLAB | [`Suarez23212236.pdf`](./Suarez23212236.pdf) |
 | Figura exportada por MATLAB/Simulink | [`Respuesta_matlab.pdf`](./Respuesta_matlab.pdf) |
 | Figura exportada por Python | [`Respuesta_python.pdf`](./Respuesta_python.pdf) |
-| Evidencia de sintonización | [`Propiedades_PID.jpeg`](./Propiedades_PID.jpeg) |
-| Análisis matemático manuscrito | [`Analisis_matematico.pdf`](./Analisis_matematico.pdf) |
+| Evidencia de sintonización | [`Propiedades del controlador.jpeg`](./Propiedades del controlador.jpeg) |
+| Análisis matemático manuscrito | [`Análisis Matemático P4.pdf`](./Análisis Matemático P4.pdf) |
 
 ### Verificación cruzada
 
@@ -471,8 +471,8 @@ Las cinco implementaciones solicitadas deben describir la misma dinámica:
 | Ecuaciones integro-diferenciales | `sistema.slx` → `Vs(t): EID` | Incluida |
 | Funciones de transferencia | `sistema.slx` → `Vs(t): FT` | Incluida |
 | Circuito equivalente | `sistema.slx` → `Vs(t): CE` (Simscape Electrical) | Incluida |
-| Cuaderno MATLAB | `Ortega23212223.mlx` | Incluida |
-| Código Python | `Ortega23212223.py` | Incluida |
+| Cuaderno MATLAB | `Suarez23212236.mlx` | Incluida |
+| Código Python | `Suarez23212236.py` | Incluida |
 
 Las diferencias entre MATLAB/Simulink y Python pueden atribuirse a:
 
@@ -491,7 +491,7 @@ Las diferencias entre MATLAB/Simulink y Python pueden atribuirse a:
 
 Los circuitos del control y del caso, junto con el controlador analógico basado en amplificadores operacionales, se construyeron en protoboard con los valores comerciales especificados. El instrumental empleado fue generador de funciones, fuente de alimentación simétrica para los amplificadores operacionales y osciloscopio OWON.
 
-![Montaje experimental en protoboard](./Circuito_lab.jpeg)
+![Montaje experimental en protoboard](./Montaje experimental.jpeg)
 
 *(Pendiente: indicar qué sección del montaje corresponde al circuito RLC, al controlador y a los puntos de medición $V_a$ y $V_b$.)*
 
@@ -525,7 +525,7 @@ Parámetros de la captura: base de tiempo de $500\,\mathrm{ms/div}$, escala vert
 
 <a id="discusion"></a>
 ## Discusión
-
+https://github.com/l23212236-ai/MSFP4/blob/main/README.md
 - **Efecto de $C$ y $R_2$.** Aumentar $C$ de $1\,\mu\mathrm{F}$ a $1000\,\mu\mathrm{F}$ incrementa la capacidad de almacenamiento y desplaza el polo dominante de $-1010$ a $-2$ rad/s; reducir $R_2$ de $100\,\mathrm{k}\Omega$ a $1\,\mathrm{k}\Omega$ aumenta la disipación y reduce el valor final de $0.99$ a $0.5$. En conjunto, el caso es más lento y alcanza un nivel hormonal efectivo menor.
 - **Sin oscilaciones.** Ambos sistemas son de segundo orden pero con polos reales y muy separados, por lo que su respuesta se comporta prácticamente como de primer orden.
 - **Efecto del controlador.** El PID con acción integral elimina el error estacionario y acelera la respuesta del caso hasta igualarla con la referencia, a costa de un sobreimpulso transitorio. El tiempo de establecimiento pasa de ≈2 s (lazo abierto) a ≈10 ms (valor reportado por *PID Tuner*).
@@ -617,16 +617,16 @@ flowchart TD
 .
 ├── README.md                              # Reporte y guía de reproducción
 ├── CITATION.cff                           # Datos de citación (pendiente)
-├── Ortega23212223.mlx                     # Cuaderno MATLAB
-├── Ortega23212223.pdf                     # Exportación del cuaderno
-├── Ortega23212223.py                      # Implementación Python
+├── Suarez23212236.mlx                     # Cuaderno MATLAB
+├── Suarez23212236.pdf                     # Exportación del cuaderno
+├── Suarez23212236.py                      # Implementación Python
 ├── sistema.slx                            # Modelo Simulink/Simscape
-├── Analisis_matematico.pdf                # Análisis matemático manuscrito
+├── Análisis Matemático P4.pdf             # Análisis matemático manuscrito
 ├── Diagrama_Biologico.png                 # Diagrama biológico (BioRender)
-├── Propiedades_PID.jpeg                   # Evidencia de sintonización del PID
+├── Propiedades del controlador.jpeg       # Evidencia de sintonización del PID
 ├── Respuesta_matlab.pdf                   # Figura MATLAB/Simulink
 ├── Respuesta_python.pdf                   # Figura Python
-├── Circuito_lab.jpeg                      # Fotografía del montaje experimental
+├── Montaje experimental.jpeg              # Fotografía del montaje experimental
 └── Respuesta_lab.jpg                      # Captura del osciloscopio
 ```
 
@@ -654,7 +654,7 @@ python -m pip install numpy matplotlib control
 
 ### Secuencia de reproducción en MATLAB/Simulink
 
-1. Colocar `Ortega23212223.mlx` y `sistema.slx` en el mismo directorio.
+1. Colocar `Suarez23212236.mlx` y `sistema.slx` en el mismo directorio.
 2. Abrir el cuaderno y verificar `StopTime = 10`, `Solver = ode15s` y `MaxStep = 1e-3`.
 3. Ejecutar todas las secciones.
 4. Revisar las señales `Ve`, `Vex`, `Vey` y `PID` en el *Workspace*.
@@ -663,7 +663,7 @@ python -m pip install numpy matplotlib control
 ### Secuencia de reproducción en Python
 
 ```bash
-python Ortega23212223.py
+python Suarez23212236.py
 ```
 
 Se imprimen los polos de control y caso, los valores de $R_e$, $R_r$ y $C_e$ y las funciones de transferencia del PID y del lazo cerrado, y se genera `Respuesta_python.pdf`.
